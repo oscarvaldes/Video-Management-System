@@ -1,0 +1,5 @@
+applications:
+- name: livestream
+  instances: 1
+  memory: 256m
+  buildpack: nodejs_buildpack_1_5_11

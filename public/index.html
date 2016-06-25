@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <link href="http://vjs.zencdn.net/5.10.2/video-js.css" rel="stylesheet">
+    <link href="/stylesheets/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<form action="../video" method="post">
+    <p>Please input the IP Address of the Camera:</p>
+
+    <input id="IP" name="IP">
+
+    <input type="submit" onclick="myFunction()">
+</form>
+
+<video controls autoplay id="my-video" class="video-js" preload="auto" width="640" height="264" data-setup="{}">
+    <source src="/video" type='video/mp4'>
+    <p class="vjs-no-js">
+        To view this video please enable JavaScript, and consider upgrading to a web browser that
+        <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+    </p>
+</video>
+
+<script src="http://vjs.zencdn.net/5.10.2/video.js"></script>
+<script>
+function myFunction() {
+    if (document.getElementById("IP").value==='10.4.81.232'||document.getElementById("IP").value==='10.4.81.228'){
+    document.getElementById("my-video").style.display = "block";
+  }
+  else  alert( "Invalid IP Address,try again." );
+
+}
+
+</script>
+
+</body>
